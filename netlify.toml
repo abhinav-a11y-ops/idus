@@ -2,9 +2,22 @@
   command = "echo 'Static site - no build required'"
   publish = "."
 
+# HTML revalidates on every request so deploys propagate immediately
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/privacy.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Everything else (assets, robots, sitemap) is edge-cached for an hour
 [[headers]]
   for = "/*"
   [headers.values]
+    Cache-Control = "public, max-age=3600"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     Referrer-Policy = "strict-origin-when-cross-origin"

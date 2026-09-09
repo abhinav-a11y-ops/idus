@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  validate:
+    name: Lint & validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: HTML lint (html-validate, incl. a11y rules)
+        run: npx --yes html-validate@11 index.html privacy.html
+
+      - name: Validate netlify.toml (TOML)
+        run: python3 -c "import tomllib; tomllib.load(open('netlify.toml', 'rb')); print('netlify.toml OK')"
+
+      - name: Validate sitemap.xml (XML)
+        run: python3 -c "import xml.dom.minidom; xml.dom.minidom.parse('sitemap.xml'); print('sitemap.xml OK')"
+
+      - name: Check SEO URL consistency (canonical / sitemap / robots / og:image)
+        run: python3 scripts/check_urls.py
+
+      - name: Check for unused CSS classes
+        run: python3 scripts/check_css.py
+
+      - name: Check OG image is exactly 1200x630
+        run: |
+          python3 - <<'PY'
+          import struct
+          with open('assets/og-idus-1200x630.png', 'rb') as f:
+              f.seek(16)
+              w, h = struct.unpack('>II', f.read(8))
+          assert (w, h) == (1200, 630), f'og image is {w}x{h}, expected 1200x630'
+          print(f'og image: OK ({w}x{h})')
+          PY

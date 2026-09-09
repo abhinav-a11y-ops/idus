@@ -15,28 +15,30 @@
     <meta property="og:title" content="IDUS — Enterprise-Grade AI Platform">
     <meta property="og:description" content="12+ leading AI models — chat, image, video, code generation and web search — in one secure, enterprise-grade platform.">
     <meta property="og:url" content="https://abhinav-a11y-ops.github.io/idus/">
+    <meta property="og:image" content="https://abhinav-a11y-ops.github.io/idus/assets/og-idus-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="IDUS — Enterprise-Grade AI Platform. 12+ models: chat, image, video, code, search.">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="IDUS — Enterprise-Grade AI Platform">
     <meta name="twitter:description" content="12+ leading AI models in one secure, enterprise-grade platform. Start free with 5000+ credits.">
+    <meta name="twitter:image" content="https://abhinav-a11y-ops.github.io/idus/assets/og-idus-1200x630.png">
 
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230F1729'/%3E%3Ctext x='32' y='46' font-family='Arial, sans-serif' font-size='40' font-weight='900' text-anchor='middle' fill='%2300D9FF'%3EI%3C/text%3E%3C/svg%3E">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Google Analytics (Measurement ID is a placeholder — see ANALYTICS_SETUP.md) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Google Analytics 4: no tag and no cookies load until the visitor grants
+         consent via the banner at the end of the body (see privacy.html). -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX', {
-            'page_path': window.location.pathname,
-            'page_title': document.title
-        });
+        window.gtag = gtag;
     </script>
 
     <script type="application/ld+json">
@@ -48,12 +50,40 @@
                 "name": "IDUS",
                 "url": "https://abhinav-a11y-ops.github.io/idus/",
                 "email": "mailto:kumar.abhinavaps@gmail.com",
+                "logo": "https://abhinav-a11y-ops.github.io/idus/assets/og-idus-1200x630.png",
                 "sameAs": ["https://github.com/abhinav-a11y-ops/idus"]
             },
             {
                 "@type": "WebSite",
                 "name": "IDUS — Enterprise-Grade AI Platform",
                 "url": "https://abhinav-a11y-ops.github.io/idus/"
+            },
+            {
+                "@type": "Product",
+                "name": "IDUS Platform",
+                "description": "Enterprise-grade AI platform unifying 12+ models for chat, image generation, video generation, code generation and real-time web search.",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "IDUS"
+                },
+                "offers": [
+                    {
+                        "@type": "Offer",
+                        "name": "Free Tier",
+                        "price": "0",
+                        "priceCurrency": "USD",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://serene-idus-a35dd0.netlify.app"
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Premium",
+                        "price": "10",
+                        "priceCurrency": "USD",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://serene-idus-a35dd0.netlify.app"
+                    }
+                ]
             }
         ]
     }
@@ -551,6 +581,41 @@
             font-size: 14px;
         }
 
+        /* Cookie consent banner */
+        .consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1500;
+            background: rgba(15, 23, 41, 0.98);
+            color: #FFFFFF;
+            border-top: 2px solid #00D9FF;
+            padding: 24px 0;
+        }
+
+        .consent-banner p {
+            font-size: 15px;
+            opacity: 0.95;
+            margin-bottom: 16px;
+        }
+
+        .consent-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .consent-banner .cta-button,
+        .consent-banner .cta-button-secondary {
+            padding: 12px 28px;
+            font-size: 14px;
+        }
+
+        .consent-banner a {
+            color: #00D9FF;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             nav ul { gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
@@ -593,18 +658,20 @@
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav aria-label="Primary">
-        <div class="container">
-            <div class="logo">IDUS</div>
-            <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#models">Models</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#architecture">Architecture</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <header>
+        <nav aria-label="Primary">
+            <div class="container">
+                <div class="logo">IDUS</div>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#models">Models</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#architecture">Architecture</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <main id="main-content">
         <!-- Hero Section -->
@@ -837,7 +904,7 @@
                 <ul>
                     <li><a href="#">About</a></li>
                     <li><a href="mailto:kumar.abhinavaps@gmail.com">Contact</a></li>
-                    <li><a href="#">Privacy</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
                     <li><a href="#">Terms</a></li>
                 </ul>
             </div>
@@ -852,8 +919,74 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 IDUS Platform. All rights reserved. Enterprise-Grade AI Solutions.</p>
+            <p>&copy; <span id="copyright-year">2026</span> IDUS Platform. All rights reserved. Enterprise-Grade AI Solutions.</p>
         </div>
     </footer>
+
+    <!-- Cookie consent banner (real buttons, labelled region, focus moved in on show) -->
+    <section id="consent-banner" class="consent-banner" aria-label="Analytics consent" hidden>
+        <div class="container">
+            <p><strong>Privacy</strong> — We use Google Analytics to understand how visitors use this site (page views and referrers only). No advertising cookies and no other trackers. Your choice is stored in this browser only. <a href="privacy.html">Privacy policy</a></p>
+            <div class="consent-actions">
+                <button type="button" id="consent-accept" class="cta-button">Allow analytics</button>
+                <button type="button" id="consent-decline" class="cta-button-secondary">Essentials only</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    (function () {
+        'use strict';
+
+        // GA4 Measurement ID — replace this single value once your property exists
+        // (see ANALYTICS_SETUP.md). The tag below only loads after consent.
+        var MEASUREMENT_ID = 'G-XXXXXXXXXX';
+        var KEY = 'idus-analytics-consent';
+
+        var stored = null;
+        try { stored = window.localStorage.getItem(KEY); } catch (e) { /* storage unavailable */ }
+
+        function showBanner(show) {
+            var banner = document.getElementById('consent-banner');
+            if (banner) banner.hidden = !show;
+        }
+
+        function loadAnalytics() {
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(MEASUREMENT_ID);
+            document.head.appendChild(s);
+            window.gtag('js', new Date());
+            window.gtag('config', MEASUREMENT_ID, {
+                'page_path': window.location.pathname,
+                'page_title': document.title
+            });
+        }
+
+        function decide(value) {
+            try { window.localStorage.setItem(KEY, value); } catch (e) { /* ignore */ }
+            showBanner(false);
+            if (value === 'granted') loadAnalytics();
+        }
+
+        var accept = document.getElementById('consent-accept');
+        var decline = document.getElementById('consent-decline');
+        if (accept) accept.addEventListener('click', function () { decide('granted'); });
+        if (decline) decline.addEventListener('click', function () { decide('declined'); });
+
+        if (stored === 'granted') {
+            loadAnalytics();
+        } else if (stored !== 'declined') {
+            // No choice on record: ask. A previous "Essentials only" choice
+            // is respected silently — no banner, no analytics.
+            showBanner(true);
+            if (accept) accept.focus();
+        }
+
+        // Keep the footer copyright year current automatically
+        var year = document.getElementById('copyright-year');
+        if (year) year.textContent = String(new Date().getFullYear());
+    })();
+    </script>
 </body>
 </html>
