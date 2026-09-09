@@ -44,7 +44,7 @@ After creating the stream, you'll see:
 
 Replace `G-XXXXXXXXXX` in the HTML file with your actual Measurement ID:
 
-**In `index.html` (lines 10 and 15):**
+**In the Google Analytics scripts in the `<head>` of `index.html` (2 occurrences):**
 
 ```html
 <!-- Before -->
