@@ -44,22 +44,24 @@ After creating the stream, you'll see:
 
 Replace `G-XXXXXXXXXX` in the HTML file with your actual Measurement ID:
 
-**In `index.html` (lines 10 and 15):**
+**Near the end of `index.html`'s body, in the consent/analytics script — there is exactly one value to change (`MEASUREMENT_ID`):**
 
 ```html
 <!-- Before -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-    gtag('config', 'G-XXXXXXXXXX', {
+var MEASUREMENT_ID = 'G-XXXXXXXXXX';
 ```
 
 **After (example):**
 ```html
 <!-- After -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123DEF4"></script>
-<script>
-    gtag('config', 'G-ABC123DEF4', {
+var MEASUREMENT_ID = 'G-ABC123DEF4';
 ```
+
+> **Note on consent:** the analytics tag loads *only after* a visitor clicks
+> “Allow analytics” in the consent banner (or returns after allowing it).
+> Until then no tag, no cookies. Once consent is given, the tag loads
+> dynamically from `www.googletagmanager.com` and `gtag('config', …)` runs
+> automatically — no further code changes are needed.
 
 ---
 

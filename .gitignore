@@ -1,0 +1,22 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Node (not used by this static site, but kept for safety)
+node_modules/
+npm-debug.log*
+
+# Netlify CLI artifacts
+.netlify/
+
+# Build output
+dist/
+build/
+out/

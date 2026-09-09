@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abhinav-a11y-ops.github.io/idus/sitemap.xml

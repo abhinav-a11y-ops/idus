@@ -3,20 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDUS - Enterprise AI Platform | Deployment</title>
+    <title>IDUS — Enterprise-Grade AI Platform</title>
+    <meta name="description" content="IDUS unifies 12+ leading AI models — chat, image, video, code generation and web search — in one secure, enterprise-grade platform. Start free with 5000+ credits.">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#0F1729">
+    <link rel="canonical" href="https://abhinav-a11y-ops.github.io/idus/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="IDUS">
+    <meta property="og:title" content="IDUS — Enterprise-Grade AI Platform">
+    <meta property="og:description" content="12+ leading AI models — chat, image, video, code generation and web search — in one secure, enterprise-grade platform.">
+    <meta property="og:url" content="https://abhinav-a11y-ops.github.io/idus/">
+    <meta property="og:image" content="https://abhinav-a11y-ops.github.io/idus/assets/og-idus-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="IDUS — Enterprise-Grade AI Platform. 12+ models: chat, image, video, code, search.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IDUS — Enterprise-Grade AI Platform">
+    <meta name="twitter:description" content="12+ leading AI models in one secure, enterprise-grade platform. Start free with 5000+ credits.">
+    <meta name="twitter:image" content="https://abhinav-a11y-ops.github.io/idus/assets/og-idus-1200x630.png">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230F1729'/%3E%3Ctext x='32' y='46' font-family='Arial, sans-serif' font-size='40' font-weight='900' text-anchor='middle' fill='%2300D9FF'%3EI%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+    <!-- Google Analytics 4: no tag and no cookies load until the visitor grants
+         consent via the banner at the end of the body (see privacy.html). -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX', {
-            'page_path': window.location.pathname,
-            'page_title': document.title
-        });
+        window.gtag = gtag;
     </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "name": "IDUS",
+                "url": "https://abhinav-a11y-ops.github.io/idus/",
+                "email": "mailto:kumar.abhinavaps@gmail.com",
+                "logo": "https://abhinav-a11y-ops.github.io/idus/assets/og-idus-1200x630.png",
+                "sameAs": ["https://github.com/abhinav-a11y-ops/idus"]
+            },
+            {
+                "@type": "WebSite",
+                "name": "IDUS — Enterprise-Grade AI Platform",
+                "url": "https://abhinav-a11y-ops.github.io/idus/"
+            },
+            {
+                "@type": "Product",
+                "name": "IDUS Platform",
+                "description": "Enterprise-grade AI platform unifying 12+ models for chat, image generation, video generation, code generation and real-time web search.",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "IDUS"
+                },
+                "offers": [
+                    {
+                        "@type": "Offer",
+                        "name": "Free Tier",
+                        "price": "0",
+                        "priceCurrency": "USD",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://serene-idus-a35dd0.netlify.app"
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Premium",
+                        "price": "10",
+                        "priceCurrency": "USD",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://serene-idus-a35dd0.netlify.app"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -24,11 +96,40 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: #FFFFFF;
             color: #222222;
             line-height: 1.6;
+        }
+
+        /* Visible keyboard focus (WCAG 2.4.7) */
+        :focus-visible {
+            outline: 3px solid #007A8C;
+            outline-offset: 3px;
+        }
+
+        /* Skip link for keyboard / screen-reader users */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 16px;
+            z-index: 2000;
+            background: #00D9FF;
+            color: #000000;
+            padding: 12px 24px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 0 0 4px 4px;
+        }
+
+        .skip-link:focus {
+            top: 0;
         }
 
         /* Navigation */
@@ -148,6 +249,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 20px;
             margin-bottom: 40px;
+            list-style: none;
         }
 
         .stat {
@@ -214,6 +316,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
+            list-style: none;
         }
 
         .feature-card {
@@ -252,6 +355,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
+            list-style: none;
         }
 
         .model-box {
@@ -266,7 +370,7 @@
             font-size: 18px;
             font-weight: 900;
             margin-bottom: 10px;
-            color: #00D9FF;
+            color: #007A8C;
         }
 
         .model-desc {
@@ -311,8 +415,17 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 48px;
             font-weight: 900;
-            color: #00D9FF;
+            color: #007A8C;
             margin-bottom: 30px;
+        }
+
+        .pricing-card.premium .pricing-price {
+            color: #00D9FF;
+        }
+
+        .pricing-period {
+            font-size: 16px;
+            font-weight: 400;
         }
 
         .pricing-features {
@@ -359,12 +472,12 @@
             box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
         }
 
-        .arch-item h4 {
+        .arch-item h3 {
             font-family: 'Montserrat', sans-serif;
             font-size: 20px;
             font-weight: 900;
             margin-bottom: 15px;
-            color: #00D9FF;
+            color: #007A8C;
         }
 
         .arch-item p {
@@ -436,7 +549,7 @@
             margin-bottom: 40px;
         }
 
-        footer h4 {
+        footer h2 {
             font-family: 'Montserrat', sans-serif;
             font-size: 18px;
             font-weight: 900;
@@ -468,9 +581,44 @@
             font-size: 14px;
         }
 
+        /* Cookie consent banner */
+        .consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1500;
+            background: rgba(15, 23, 41, 0.98);
+            color: #FFFFFF;
+            border-top: 2px solid #00D9FF;
+            padding: 24px 0;
+        }
+
+        .consent-banner p {
+            font-size: 15px;
+            opacity: 0.95;
+            margin-bottom: 16px;
+        }
+
+        .consent-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .consent-banner .cta-button,
+        .consent-banner .cta-button-secondary {
+            padding: 12px 28px;
+            font-size: 14px;
+        }
+
+        .consent-banner a {
+            color: #00D9FF;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
-            nav ul { gap: 20px; }
+            nav ul { gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
             .hero .container { grid-template-columns: 1fr; }
             .features-grid { grid-template-columns: 1fr; }
             .models-grid { grid-template-columns: repeat(2, 1fr); }
@@ -480,231 +628,261 @@
             .hero h1 { font-size: 40px; }
             .section-title { font-size: 36px; }
         }
+
+        @media (max-width: 480px) {
+            nav .container { flex-direction: column; gap: 12px; align-items: flex-start; }
+            nav ul { gap: 12px 16px; }
+            .hero { margin-top: 130px; }
+            .hero h1 { font-size: 34px; }
+            .hero-image { font-size: 80px; }
+            .models-grid { grid-template-columns: 1fr; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+        }
+
+        /* Respect users who prefer reduced motion (WCAG 2.3.3) */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="logo">IDUS</div>
-            <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#models">Models</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#architecture">Architecture</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <header>
+        <nav aria-label="Primary">
+            <div class="container">
+                <div class="logo">IDUS</div>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#models">Models</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#architecture">Architecture</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div>
-                <h1>Enterprise-Grade <span class="highlight">AI Platform</span></h1>
-                <p>Access 12+ powerful AI models in one unified platform. Deploy with confidence. Scale with ease.</p>
-                
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">12+</div>
-                        <div class="stat-label">AI Models</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">99.9%</div>
-                        <div class="stat-label">Uptime</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">5000+</div>
-                        <div class="stat-label">Free Credits</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">∞</div>
-                        <div class="stat-label">Unlimited Access</div>
-                    </div>
-                </div>
-
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
                 <div>
+                    <h1 id="hero-title">Enterprise-Grade <span class="highlight">AI Platform</span></h1>
+                    <p>Access 12+ powerful AI models in one unified platform. Deploy with confidence. Scale with ease.</p>
+
+                    <ul class="hero-stats">
+                        <li class="stat">
+                            <div class="stat-number">12+</div>
+                            <div class="stat-label">AI Models</div>
+                        </li>
+                        <li class="stat">
+                            <div class="stat-number">99.9%</div>
+                            <div class="stat-label">Uptime</div>
+                        </li>
+                        <li class="stat">
+                            <div class="stat-number">5000+</div>
+                            <div class="stat-label">Free Credits</div>
+                        </li>
+                        <li class="stat">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Unlimited Access</div>
+                        </li>
+                    </ul>
+
+                    <div>
+                        <a href="https://serene-idus-a35dd0.netlify.app" class="cta-button">Start Free Trial</a>
+                    </div>
+                </div>
+                <div class="hero-image" aria-hidden="true">✨</div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features" aria-labelledby="features-title">
+            <div class="container">
+                <h2 class="section-title" id="features-title">Powerful Features</h2>
+                <ul class="features-grid">
+                    <li class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">💬</div>
+                        <h3>AI Chat</h3>
+                        <p>Interact with 12+ AI models. Get instant responses with streaming support and context awareness.</p>
+                    </li>
+                    <li class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🎨</div>
+                        <h3>Image Generation</h3>
+                        <p>Create stunning images with Stable Diffusion, FLUX, and Replicate. Watermarking for free tier.</p>
+                    </li>
+                    <li class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🎬</div>
+                        <h3>Video Generation</h3>
+                        <p>Professional video creation with RunwayML Flex. Text-to-video, image animation, and editing.</p>
+                    </li>
+                    <li class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">💻</div>
+                        <h3>Code Generation</h3>
+                        <p>Generate code in any language. Code Llama, DeepSeek, and Gemini for complex algorithms.</p>
+                    </li>
+                    <li class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🔍</div>
+                        <h3>Web Search</h3>
+                        <p>Real-time search results with Serper. Get current information with source attribution.</p>
+                    </li>
+                    <li class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">📊</div>
+                        <h3>History &amp; Analytics</h3>
+                        <p>Track all generations. View usage analytics, export data, and manage your content.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Models Section -->
+        <section class="models" id="models" aria-labelledby="models-title">
+            <div class="container">
+                <h2 class="section-title" id="models-title">12+ AI Models</h2>
+                <ul class="models-grid">
+                    <li class="model-box">
+                        <div class="model-name"><span aria-hidden="true">⚡</span> Groq</div>
+                        <div class="model-desc">Ultra-fast LLM inference with sub-second responses</div>
+                    </li>
+                    <li class="model-box">
+                        <div class="model-name"><span aria-hidden="true">🧠</span> DeepSeek</div>
+                        <div class="model-desc">Advanced reasoning and complex problem solving</div>
+                    </li>
+                    <li class="model-box">
+                        <div class="model-name"><span aria-hidden="true">🔍</span> Gemini</div>
+                        <div class="model-desc">Multimodal capabilities for diverse tasks</div>
+                    </li>
+                    <li class="model-box">
+                        <div class="model-name"><span aria-hidden="true">🔄</span> Hugging Face</div>
+                        <div class="model-desc">Flexible open-source models for customization</div>
+                    </li>
+                    <li class="model-box">
+                        <div class="model-name"><span aria-hidden="true">🎨</span> Stable Diffusion</div>
+                        <div class="model-desc">Fast and reliable image generation</div>
+                    </li>
+                    <li class="model-box">
+                        <div class="model-name"><span aria-hidden="true">✨</span> FLUX</div>
+                        <div class="model-desc">Ultra-high quality image generation</div>
+                    </li>
+                    <li class="model-box">
+                        <div class="model-name"><span aria-hidden="true">🎬</span> RunwayML Flex</div>
+                        <div class="model-desc">Professional video generation and editing</div>
+                    </li>
+                    <li class="model-box">
+                        <div class="model-name"><span aria-hidden="true">🔍</span> Serper</div>
+                        <div class="model-desc">Real-time web search and information retrieval</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+            <div class="container">
+                <h2 class="section-title" id="pricing-title">Simple Pricing</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card free">
+                        <h3 class="pricing-title">Free Tier</h3>
+                        <div class="pricing-price">$0</div>
+                        <ul class="pricing-features">
+                            <li>2000 monthly credits</li>
+                            <li>3 chats per day</li>
+                            <li>2 images per day</li>
+                            <li>1 video per day (max 20 seconds)</li>
+                            <li>Watermarked outputs</li>
+                            <li>Standard quality</li>
+                            <li>Basic models only</li>
+                            <li>Community support</li>
+                        </ul>
+                        <a href="https://serene-idus-a35dd0.netlify.app" class="cta-button">Start Free</a>
+                    </div>
+                    <div class="pricing-card premium">
+                        <h3 class="pricing-title">Premium</h3>
+                        <div class="pricing-price">$10<span class="pricing-period">/month</span></div>
+                        <ul class="pricing-features">
+                            <li>Unlimited monthly credits</li>
+                            <li>Unlimited generations</li>
+                            <li>Unlimited video (4K quality)</li>
+                            <li>No watermarks</li>
+                            <li>Ultra-high quality outputs</li>
+                            <li>All 12+ premium models</li>
+                            <li>Advanced models (DeepSeek, Gemini Pro)</li>
+                            <li>Priority support (24/7)</li>
+                            <li>Commercial licensing</li>
+                            <li>Batch processing (100+ items)</li>
+                            <li>API access with webhooks</li>
+                            <li>Custom model fine-tuning</li>
+                            <li>Early access to new features</li>
+                        </ul>
+                        <a href="https://serene-idus-a35dd0.netlify.app" class="cta-button">Subscribe Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Section -->
+        <section class="architecture" id="architecture" aria-labelledby="architecture-title">
+            <div class="container">
+                <h2 class="section-title" id="architecture-title">Technical Architecture</h2>
+                <div class="arch-grid">
+                    <div class="arch-item">
+                        <h3>Frontend Stack</h3>
+                        <p><strong>React 19</strong> with Tailwind CSS 4, TypeScript, and modern UI components. Responsive design with dark theme.</p>
+                    </div>
+                    <div class="arch-item">
+                        <h3>Backend Stack</h3>
+                        <p><strong>Express.js</strong> with tRPC for end-to-end type safety. Secure API proxies for all external services.</p>
+                    </div>
+                    <div class="arch-item">
+                        <h3>Database</h3>
+                        <p><strong>MySQL/TiDB</strong> with Drizzle ORM. 10 core tables for users, subscriptions, credits, and generations.</p>
+                    </div>
+                    <div class="arch-item">
+                        <h3>Deployment</h3>
+                        <p><strong>Netlify</strong> with autoscaling, global CDN, and 99.9% uptime. Automatic builds and deployments.</p>
+                    </div>
+                    <div class="arch-item">
+                        <h3>Authentication</h3>
+                        <p><strong>Manus OAuth</strong> for secure user authentication. JWT tokens for session management.</p>
+                    </div>
+                    <div class="arch-item">
+                        <h3>Payments</h3>
+                        <p><strong>Razorpay</strong> for recurring subscriptions. Multiple payment methods: cards, UPI, wallets, net banking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title">Ready to Deploy IDUS?</h2>
+                <p>Start with 5000+ free credits. No payment required. All features included.</p>
+                <div class="cta-buttons">
                     <a href="https://serene-idus-a35dd0.netlify.app" class="cta-button">Start Free Trial</a>
+                    <a href="mailto:kumar.abhinavaps@gmail.com" class="cta-button-secondary">Contact Sales</a>
                 </div>
             </div>
-            <div class="hero-image">✨</div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="section-title">Powerful Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">💬</div>
-                    <h3>AI Chat</h3>
-                    <p>Interact with 12+ AI models. Get instant responses with streaming support and context awareness.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Image Generation</h3>
-                    <p>Create stunning images with Stable Diffusion, FLUX, and Replicate. Watermarking for free tier.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎬</div>
-                    <h3>Video Generation</h3>
-                    <p>Professional video creation with RunwayML Flex. Text-to-video, image animation, and editing.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💻</div>
-                    <h3>Code Generation</h3>
-                    <p>Generate code in any language. Code Llama, DeepSeek, and Gemini for complex algorithms.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔍</div>
-                    <h3>Web Search</h3>
-                    <p>Real-time search results with Serper. Get current information with source attribution.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>History & Analytics</h3>
-                    <p>Track all generations. View usage analytics, export data, and manage your content.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Models Section -->
-    <section class="models" id="models">
-        <div class="container">
-            <h2 class="section-title">12+ AI Models</h2>
-            <div class="models-grid">
-                <div class="model-box">
-                    <div class="model-name">⚡ Groq</div>
-                    <div class="model-desc">Ultra-fast LLM inference with sub-second responses</div>
-                </div>
-                <div class="model-box">
-                    <div class="model-name">🧠 DeepSeek</div>
-                    <div class="model-desc">Advanced reasoning and complex problem solving</div>
-                </div>
-                <div class="model-box">
-                    <div class="model-name">🔍 Gemini</div>
-                    <div class="model-desc">Multimodal capabilities for diverse tasks</div>
-                </div>
-                <div class="model-box">
-                    <div class="model-name">🔄 Hugging Face</div>
-                    <div class="model-desc">Flexible open-source models for customization</div>
-                </div>
-                <div class="model-box">
-                    <div class="model-name">🎨 Stable Diffusion</div>
-                    <div class="model-desc">Fast and reliable image generation</div>
-                </div>
-                <div class="model-box">
-                    <div class="model-name">✨ FLUX</div>
-                    <div class="model-desc">Ultra-high quality image generation</div>
-                </div>
-                <div class="model-box">
-                    <div class="model-name">🎬 RunwayML Flex</div>
-                    <div class="model-desc">Professional video generation and editing</div>
-                </div>
-                <div class="model-box">
-                    <div class="model-name">🔍 Serper</div>
-                    <div class="model-desc">Real-time web search and information retrieval</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <h2 class="section-title">Simple Pricing</h2>
-            <div class="pricing-grid">
-                <div class="pricing-card free">
-                    <div class="pricing-title">Free Tier</div>
-                    <div class="pricing-price">$0</div>
-                    <ul class="pricing-features">
-                        <li>2000 monthly credits</li>
-                        <li>3 chats per day</li>
-                        <li>2 images per day</li>
-                        <li>1 video per day (max 20 seconds)</li>
-                        <li>Watermarked outputs</li>
-                        <li>Standard quality</li>
-                        <li>Basic models only</li>
-                        <li>Community support</li>
-                    </ul>
-                    <a href="https://serene-idus-a35dd0.netlify.app" class="cta-button">Start Free</a>
-                </div>
-                <div class="pricing-card premium">
-                    <div class="pricing-title">Premium</div>
-                    <div class="pricing-price">$10<span style="font-size: 16px; font-weight: 400;">/month</span></div>
-                    <ul class="pricing-features">
-                        <li>Unlimited monthly credits</li>
-                        <li>Unlimited generations</li>
-                        <li>Unlimited video (4K quality)</li>
-                        <li>No watermarks</li>
-                        <li>Ultra-high quality outputs</li>
-                        <li>All 12+ premium models</li>
-                        <li>Advanced models (DeepSeek, Gemini Pro)</li>
-                        <li>Priority support (24/7)</li>
-                        <li>Commercial licensing</li>
-                        <li>Batch processing (100+ items)</li>
-                        <li>API access with webhooks</li>
-                        <li>Custom model fine-tuning</li>
-                        <li>Early access to new features</li>
-                    </ul>
-                    <a href="https://serene-idus-a35dd0.netlify.app" class="cta-button">Subscribe Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Architecture Section -->
-    <section class="architecture" id="architecture">
-        <div class="container">
-            <h2 class="section-title">Technical Architecture</h2>
-            <div class="arch-grid">
-                <div class="arch-item">
-                    <h4>Frontend Stack</h4>
-                    <p><strong>React 19</strong> with Tailwind CSS 4, TypeScript, and modern UI components. Responsive design with dark theme.</p>
-                </div>
-                <div class="arch-item">
-                    <h4>Backend Stack</h4>
-                    <p><strong>Express.js</strong> with tRPC for end-to-end type safety. Secure API proxies for all external services.</p>
-                </div>
-                <div class="arch-item">
-                    <h4>Database</h4>
-                    <p><strong>MySQL/TiDB</strong> with Drizzle ORM. 10 core tables for users, subscriptions, credits, and generations.</p>
-                </div>
-                <div class="arch-item">
-                    <h4>Deployment</h4>
-                    <p><strong>Netlify</strong> with autoscaling, global CDN, and 99.9% uptime. Automatic builds and deployments.</p>
-                </div>
-                <div class="arch-item">
-                    <h4>Authentication</h4>
-                    <p><strong>Manus OAuth</strong> for secure user authentication. JWT tokens for session management.</p>
-                </div>
-                <div class="arch-item">
-                    <h4>Payments</h4>
-                    <p><strong>Razorpay</strong> for recurring subscriptions. Multiple payment methods: cards, UPI, wallets, net banking.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section" id="contact">
-        <div class="container">
-            <h2>Ready to Deploy IDUS?</h2>
-            <p>Start with 5000+ free credits. No payment required. All features included.</p>
-            <div class="cta-buttons">
-                <a href="https://serene-idus-a35dd0.netlify.app" class="cta-button">Start Free Trial</a>
-                <a href="mailto:kumar.abhinavaps@gmail.com" class="cta-button-secondary">Contact Sales</a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div>
-                <h4>IDUS Platform</h4>
+                <h2>IDUS Platform</h2>
                 <ul>
                     <li><a href="https://serene-idus-a35dd0.netlify.app">Launch App</a></li>
                     <li><a href="#features">Features</a></li>
@@ -713,7 +891,7 @@
                 </ul>
             </div>
             <div>
-                <h4>Resources</h4>
+                <h2>Resources</h2>
                 <ul>
                     <li><a href="#">Documentation</a></li>
                     <li><a href="#">API Docs</a></li>
@@ -722,27 +900,93 @@
                 </ul>
             </div>
             <div>
-                <h4>Company</h4>
+                <h2>Company</h2>
                 <ul>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Privacy</a></li>
+                    <li><a href="mailto:kumar.abhinavaps@gmail.com">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
                     <li><a href="#">Terms</a></li>
                 </ul>
             </div>
             <div>
-                <h4>Connect</h4>
+                <h2>Connect</h2>
                 <ul>
-                    <li><a href="#">GitHub</a></li>
+                    <li><a href="https://github.com/abhinav-a11y-ops/idus">GitHub</a></li>
                     <li><a href="#">Twitter</a></li>
                     <li><a href="#">Discord</a></li>
-                    <li><a href="#">Email</a></li>
+                    <li><a href="mailto:kumar.abhinavaps@gmail.com">Email</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 IDUS Platform. All rights reserved. Enterprise-Grade AI Solutions.</p>
+            <p>&copy; <span id="copyright-year">2026</span> IDUS Platform. All rights reserved. Enterprise-Grade AI Solutions.</p>
         </div>
     </footer>
+
+    <!-- Cookie consent banner (real buttons, labelled region, focus moved in on show) -->
+    <section id="consent-banner" class="consent-banner" aria-label="Analytics consent" hidden>
+        <div class="container">
+            <p><strong>Privacy</strong> — We use Google Analytics to understand how visitors use this site (page views and referrers only). No advertising cookies and no other trackers. Your choice is stored in this browser only. <a href="privacy.html">Privacy policy</a></p>
+            <div class="consent-actions">
+                <button type="button" id="consent-accept" class="cta-button">Allow analytics</button>
+                <button type="button" id="consent-decline" class="cta-button-secondary">Essentials only</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    (function () {
+        'use strict';
+
+        // GA4 Measurement ID — replace this single value once your property exists
+        // (see ANALYTICS_SETUP.md). The tag below only loads after consent.
+        var MEASUREMENT_ID = 'G-XXXXXXXXXX';
+        var KEY = 'idus-analytics-consent';
+
+        var stored = null;
+        try { stored = window.localStorage.getItem(KEY); } catch (e) { /* storage unavailable */ }
+
+        function showBanner(show) {
+            var banner = document.getElementById('consent-banner');
+            if (banner) banner.hidden = !show;
+        }
+
+        function loadAnalytics() {
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(MEASUREMENT_ID);
+            document.head.appendChild(s);
+            window.gtag('js', new Date());
+            window.gtag('config', MEASUREMENT_ID, {
+                'page_path': window.location.pathname,
+                'page_title': document.title
+            });
+        }
+
+        function decide(value) {
+            try { window.localStorage.setItem(KEY, value); } catch (e) { /* ignore */ }
+            showBanner(false);
+            if (value === 'granted') loadAnalytics();
+        }
+
+        var accept = document.getElementById('consent-accept');
+        var decline = document.getElementById('consent-decline');
+        if (accept) accept.addEventListener('click', function () { decide('granted'); });
+        if (decline) decline.addEventListener('click', function () { decide('declined'); });
+
+        if (stored === 'granted') {
+            loadAnalytics();
+        } else if (stored !== 'declined') {
+            // No choice on record: ask. A previous "Essentials only" choice
+            // is respected silently — no banner, no analytics.
+            showBanner(true);
+            if (accept) accept.focus();
+        }
+
+        // Keep the footer copyright year current automatically
+        var year = document.getElementById('copyright-year');
+        if (year) year.textContent = String(new Date().getFullYear());
+    })();
+    </script>
 </body>
 </html>
